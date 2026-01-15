@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8">
+<title>Uma pergunta do coração 💖</title>
+
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #f8cdda, #fbc2eb);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Georgia', serif;
+    overflow: hidden;
+  }
+
+  .card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 45px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+    max-width: 420px;
+    animation: fadeIn 2.5s;
+  }
+
+  h1 {
+    color: #c9184a;
+    font-weight: normal;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #333;
+  }
+
+  h2 {
+    color: #c9184a;
+    font-weight: normal;
+    margin-bottom: 25px;
+  }
+
+  button {
+    font-size: 18px;
+    padding: 14px 32px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+    font-family: 'Georgia', serif;
+  }
+
+  #sim {
+    background: #c9184a;
+    color: white;
+  }
+
+  #nao {
+    background: #e0e0e0;
+    position: absolute;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <h1>Meu amor 🤍</h1>
+
+  <p>
+    Desde o dia em que entraste na minha vida,<br>
+    tudo ganhou um novo significado.<br><br>
+
+    Os dias ficaram mais leves,<br>
+    os sorrisos mais fáceis,<br>
+    e o meu coração encontrou casa em ti.
+  </p>
+
+  <h2>
+    Aceitas ser o meu Valentine? 🌹
+  </h2>
+
+  <button id="sim" onclick="aceitou()">Sim, aceito 💖</button>
+  <button id="nao">Não</button>
+</div>
+
+<script>
+  const nao = document.getElementById("nao");
+
+  nao.addEventListener("mouseover", () => {
+    const x = Math.random() * (window.innerWidth - 120);
+    const y = Math.random() * (window.innerHeight - 60);
+    nao.style.left = x + "px";
+    nao.style.top = y + "px";
+  });
+
+  function aceitou() {
+    document.body.innerHTML = `
+      <div style="
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        height:100vh;
+        background:linear-gradient(135deg, #c9184a, #ff758f);
+        color:white;
+        text-align:center;
+        font-family:'Georgia', serif;
+        animation: fadeIn 2s;
+        padding: 30px;
+      ">
+        <h1>🤍 O meu coração é teu 🤍</h1>
+
+        <p style="font-size:20px; max-width:520px; line-height:1.6;">
+          Prometo cuidar de ti,<br>
+          escolher-te todos os dias,<br>
+          e fazer deste Valentine<br>
+          apenas o início de muitos outros ao teu lado.
+        </p>
+
+        <h2>Com todo o meu amor 💕</h2>
+      </div>
+    `;
+  }
+</script>
+
+</body>
+</html>
